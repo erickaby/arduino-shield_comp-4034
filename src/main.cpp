@@ -1,9 +1,23 @@
 #include <Arduino.h>
+#include <SPI.h>
+
+#include <Arduino_LSM6DS3.h>
+
+#include "odisplay.h"
+
 
 void setup() {
-  // put your setup code here, to run once:
+  Serial.begin(9600);
+  ODisplay* d{ODisplay::getInstance()};
+  delay(5000);
+  d->updateHealth(80);
+  delay(5000);
+  d->updateHealth(40);
+  delay(5000);
+  d->updateAmmo(6);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  Serial.println("Hello World!");
+  delay(1000);
 }
