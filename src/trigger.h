@@ -4,7 +4,7 @@
 #include <SPI.h>
 #include <FastLED.h>
 
-#define TRIGGER_PIN   13
+#define TRIGGER_PIN   7
 #define LED_PIN       2
 #define NUM_LEDS      8
 
