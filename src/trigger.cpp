@@ -51,15 +51,6 @@ void Trigger::updateCounter() {
       leds[3] = CRGB::Green; FastLED.show();
     }
     if (_holdTime == 2500) {
-      leds[4] = CRGB::Green; FastLED.show();
-    }
-    if (_holdTime == 3000) {
-      leds[5] = CRGB::Green; FastLED.show();
-    }
-    if (_holdTime == 3500) {
-      leds[6] = CRGB::Green; FastLED.show();
-    }
-    if (_holdTime == 4000) {
       for (int i = 0; i < 8; i++)
       {
         leds[i] = CRGB::DarkRed;
@@ -80,11 +71,15 @@ void Trigger::updateState() {
     _idleTime = _startPressed - _endPressed;
   // The button was just released.
   } else {
+    _holdTime = _endPressed - _startPressed;
     for (int i = 0; i < 8; ++i)
     {
       leds[i] = CRGB::Black; FastLED.show();
     }
     
-    _holdTime = _endPressed - _startPressed;
+    //  for (int i = 0; i < 3; ++i)
+    //  {
+
+    //  }
   }
 }

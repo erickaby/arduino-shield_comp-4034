@@ -4,9 +4,9 @@
 #include <SPI.h>
 #include <FastLED.h>
 
-#define TRIGGER_PIN   7
-#define LED_PIN       2
-#define NUM_LEDS      8
+#define TRIGGER_PIN   12
+#define LED_PIN       7
+#define NUM_LEDS      4
 
 class Trigger {
   private:
