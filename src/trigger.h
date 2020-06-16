@@ -3,6 +3,7 @@
 
 #include <SPI.h>
 #include <FastLED.h>
+#include <Adafruit_DRV2605.h>
 
 #define TRIGGER_PIN   12
 #define LED_PIN       7
